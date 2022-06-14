@@ -1,0 +1,60 @@
+/*Default settings*/
+/* @import url('https://fonts.googleapis.com/css?family=Confortaa'); */
+:root {
+    --primaryColor: rgb(221, 38, 136);
+    --secondaryColor: rgb(100,50,15);
+    --font: "Montserrat", sans-serif;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: var(--font);
+}
+
+input{
+    appearance: none;
+}
+
+button {
+    width: 100%;
+}
+
+/*Styling*/
+
+/*
+Check out the Kevin's video about custom properties: 
+-> https://www.youtube.com/watch?v=5QIiWIoCmsc
+*/

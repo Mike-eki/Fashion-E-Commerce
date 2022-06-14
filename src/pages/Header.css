@@ -1,0 +1,7 @@
+.main-header {
+    display: block;
+    max-width: 100%;
+    height: 7.5vh;
+    background-color: chocolate;
+    text-align: center;
+}
