@@ -1,20 +1,6 @@
 import './ProductCard.css';
-import { useState } from 'react';
 
 const ProductCard = ({img}) => {
-
-    const [amount, setAmount] = useState(0);
-
-    const increase = () => {
-        setAmount(amount + 1)
-    }
-    const decrease = () => {
-        if (amount > 0) setAmount(amount - 1)
-    }
-    const zero = () => {
-        if(amount < 0) setAmount(amount + amount)
-    }
-
 
     return (
         <article className="product-card">
@@ -24,8 +10,10 @@ const ProductCard = ({img}) => {
             </header>
             <img className="product-img" src={img}></img>
             <section className='product-content'>
-                <h1 className="product-name">Product name simple as possible</h1>
-                <span className="product-price">$11.99</span>
+                <main className='product-summary'>
+                    <h1 className="product-name">Current product name</h1>
+                    <span className="product-price">$11.99</span>
+                </main>
                 <footer className='options'>
                     <h2 className='options-type'>Size</h2>
                     <ul className='options-list'>
@@ -44,14 +32,7 @@ const ProductCard = ({img}) => {
                         <li className='color yellow'></li>
                     </ul>
                     <div className='options-buttons'>
-                        <div className='amount-buttons'>
-                            <button className='amount-op left' onClick={decrease}> - </button>
-                            <input className="amount" onChange={zero} value={amount} ></input>
-                            <button className='amount-op rigth' onClick={increase}> + </button>
-                        </div>
-                        <div>
-                            <button className="add-to-cart">Add to cart</button>
-                        </div>
+                        <button className="add-to-cart">Add to cart</button>
                     </div>
                 </footer>
             </section>
